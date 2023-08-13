@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        .fruits-container li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .importent-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="dom">Welcome to my DOM</h1>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio nemo incidunt, explicabo reiciendis reprehenderit iure neque itaque voluptas? Iusto tempora sint minus praesentium saepe rerum amet adipisci eaque ad nisi.
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>My awesome DOM de baba</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+            <li>dom de re baba</li>
+        </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class amarsonar-bangla">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+        </section>
+        <section id="places-title">
+            <h1>Places I like to visit</h1>
+            <ul>
+                <li>shalban</li>
+                <li>sundarban</li>
+                <li>bandarban</li>
+                <li>katanan</li>
+            </ul>
+        </section>
+        <section id="text-ccenter">
+            <h1>Places I like to visit</h1>
+            <ul>
+                <li>shalban</li>
+                <li>sundarban</li>
+                <li>bandarban</li>
+                <li>katanan</li>
+            </ul>
+        </section>
+        <section id="placesContainer">
+            <h1>Places I like to visit</h1>
+            <ul id="places-list">
+                <li>shalban</li>
+                <li>sundarban</li>
+                <li>bandarban</li>
+                <li>katanan</li>
+            </ul>
+        </section>
+    </main>
+    <script src="./js/dom.js"></script>
+    <script src="./js/append.js"></script>
+    <script src="./js/styleinjs.js"></script>
+    <script>
+
+        // getElementsByTagName
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            // console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        // console.log(allHeadings);
+        for(const h1 of allHeadings){
+            // console.log(h1.innerText);
+        }
+
+        // getElementById
+
+        const placeTitle = document.getElementById('places-title');
+        placeTitle.innerText = 'Title changed by owner'
+
+        // getElementsByClassName
+
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            // console.log(place.innerText)
+        }
+        // const fruitsTitle = document.getElementById('fruits-title');
+        // fruitsTitle.innerText = 'Title changed by JS'
+
+        const changeTitle = document.getElementById('awesome');
+        // changeTitle.innerText = 'Title change by owner using JS'
+
+
+        // query selector
+        
+        // query selector All
+
+        const someFruits = document.querySelectorAll('.fruits-container li');
+        // console.log(someFruits);
+        for(li of someFruits){
+            // console.log(li.innerText);
+        }
+    </script>
+</body>
+</html>
